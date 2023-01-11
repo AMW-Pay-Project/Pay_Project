@@ -1,7 +1,6 @@
 <?php
 
-	$_SESSION['userId'] = null;
-	$_SESSION['logged'] = null;
+	session_destroy();
 	
 	header("Location: index.php?page=home");
 
