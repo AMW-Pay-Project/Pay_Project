@@ -1,0 +1,198 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {  display: grid;
+    grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
+    grid-template-rows: 15% 10% 25% 25% 15% 5% 5%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "marginesL logo logo logo login login marginesP"
+      "marginesL konto transakcje historia portfel ustawienia marginesP"
+      "marginesL panelL panelL przerwa saldo saldo marginesP"
+      "marginesL panelL panelL przerwa saldo saldo marginesP"
+      "marginesL info1 info1 info2 info2 info3 marginesP"
+      "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
+      "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
+  }
+  
+.logo 
+{ 
+    grid-area: logo; 
+}
+  
+.login 
+{ 
+    grid-area: login; 
+    text-align: right;
+    padding-right: 30px;
+}
+  
+.ustawienia 
+{ 
+    grid-area: ustawienia; 
+}
+  
+.portfel 
+{ 
+    grid-area: portfel; 
+}
+  
+.historia 
+{ 
+    grid-area: historia; 
+}
+  
+.konto 
+{ 
+    grid-area: konto;
+}
+  
+.transakcje 
+{ 
+    grid-area: transakcje; 
+}
+  
+.stopka1 
+{ 
+    grid-area: stopka1; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+    padding-left: 20px;
+}
+  
+.stopka2 
+{ 
+    grid-area: stopka2; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+}
+  
+.stopka3 
+{ 
+    grid-area: stopka3; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+}
+  
+.stopka4 
+{ 
+    grid-area: stopka4; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+    text-align: right;
+    padding-right: 20px;
+}
+.stopkaD 
+{ 
+    grid-area: stopkaD; 
+    color: #909090;
+}
+.nav
+{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #404040;
+    color: #404040;
+}
+
+#numer
+{
+    color: rgb(255, 255, 130);
+}
+#zaloz
+{
+    background-color: rgb(0, 93, 136);
+    color:white;
+    border: none;
+}
+#zaloguj
+{
+    background-color: white;
+    color:white;
+    border: none;
+    color: #909090;
+    padding-left: 40px;
+}
+.napisLogo
+{
+    font-size: 30px;
+    line-height: 10px;
+}
+.navL:link, .navL:visited, .navL:hover, .navL:active
+{
+    text-decoration: none;
+}
+
+.panelL
+{ 
+    grid-area: panelL; 
+    margin-top: 100px;
+    margin-bottom: 250px;
+    margin-left: 100px;
+    padding:10px;
+}
+
+.przerwa 
+{ 
+    grid-area: przerwa; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.saldo
+{ 
+    grid-area: saldo; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 100px;
+}
+.gora
+{
+    text-align: center;
+}
+.napis
+{
+    font-weight: bold;
+    font-size: 25px;
+}
+.napis2
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#przycisk
+{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: #404040;
+    border: #404040 solid 2px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+#przycisk:hover
+{
+    background-color: rgb(0, 93, 136);
+    color: white;
+}
+.kasa_napis
+{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 45px;
+}
+#kraj
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#kwota
+{
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+}
