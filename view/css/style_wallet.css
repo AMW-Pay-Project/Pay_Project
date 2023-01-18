@@ -4,14 +4,15 @@ body
 }
 .container {  display: grid;
     grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
-    grid-template-rows: 15% 10% 25% 25% 15% 5% 5%;
+    grid-template-rows: 15% 10% 5% 22.5% 22.5% 15% 5% 5%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "marginesL logo logo logo login login marginesP"
       "marginesL konto transakcje historia portfel ustawienia marginesP"
-      "marginesL panelL panelL przerwa saldo saldo marginesP"
-      "marginesL panelL panelL przerwa saldo saldo marginesP"
+      "marginesL dodaj dodaj przerwa saldo saldo marginesP"
+      "marginesL panelL1 panelL1 przerwa saldo saldo marginesP"
+      "marginesL panelL2 panelL2 przerwa saldo saldo marginesP"
       "marginesL info1 info1 info2 info2 info3 marginesP"
       "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
       "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
@@ -125,14 +126,25 @@ body
 {
     text-decoration: none;
 }
-
-.panelL
+.dodaj
 { 
-    grid-area: panelL; 
-    margin-top: 100px;
-    margin-bottom: 250px;
-    margin-left: 100px;
-    padding:10px;
+    grid-area: dodaj;
+    padding-left: 500px;
+    padding-top: 10px;
+}
+.panelL1
+{ 
+    grid-area: panelL1; 
+    border: #404040 solid 2px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+.panelL2
+{ 
+    grid-area: panelL2; 
+    border: #404040 solid 2px;
+    margin-top: 30px;
+    padding-top: 10px;
 }
 
 .przerwa 
@@ -145,14 +157,24 @@ body
 
 .saldo
 { 
-    grid-area: saldo; 
-    margin-top: 10px;
-    margin-bottom: 15px;
-    margin-right: 100px;
+    grid-area: saldo;
+    margin-top: 30px;
+    padding-bottom: 200px;
+    border: #404040 solid 2px;
 }
+
 .gora
 {
     text-align: center;
+}
+.goraK
+{
+    text-align: center;
+}
+.dolK
+{
+    padding-left: 30px;
+    margin-bottom: -79px;
 }
 .napis
 {
@@ -163,6 +185,15 @@ body
 {
     font-weight: bold;
     font-size: 20px;
+}
+.napis3
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+.napis4
+{
+    font-size: 15px;
 }
 #przycisk
 {
@@ -179,11 +210,32 @@ body
     background-color: rgb(0, 93, 136);
     color: white;
 }
+#przycisk_dodaj
+{
+    height: 50px;
+    width: 110px;
+    background-color: white;
+    color: #404040;
+    border: #404040 solid 2px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+#przycisk_dodaj:hover
+{
+    background-color: rgb(0, 93, 136);
+    color: white;
+}
 .kasa_napis
 {
     font-weight: bold;
     padding-left: 10px;
     font-size: 45px;
+}
+.karta_napis
+{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 20px;
 }
 #kraj
 {
@@ -192,7 +244,7 @@ body
 }
 #kwota
 {
-    float: right;
+    margin-left: 50px;
     font-weight: bold;
     font-size: 20px;
 }
