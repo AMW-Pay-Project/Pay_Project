@@ -1,0 +1,262 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {  display: grid;
+    grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
+    grid-template-rows: 15% 10% 20% 45% 5% 5%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "marginesL logo logo logo login login marginesP"
+      "marginesL konto transakcje historia portfel ustawienia marginesP"
+      "marginesL saldo_konta saldo_konta przerwa przyciski przyciski marginesP"
+      "marginesL ostatnie_transakcje ostatnie_transakcje przerwa moje_karty moje_karty marginesP"
+      "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
+      "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
+  }
+  
+.logo 
+{ 
+    grid-area: logo; 
+}
+  
+.login 
+{ 
+    grid-area: login; 
+    text-align: right;
+    padding-right: 30px;
+}
+  
+.ustawienia 
+{ 
+    grid-area: ustawienia; 
+}
+  
+.portfel 
+{ 
+    grid-area: portfel; 
+}
+  
+.historia 
+{ 
+    grid-area: historia; 
+}
+  
+.konto 
+{ 
+    grid-area: konto;
+}
+  
+.transakcje 
+{ 
+    grid-area: transakcje; 
+}
+  
+.stopka1 
+{ 
+    grid-area: stopka1; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+    padding-left: 20px;
+}
+  
+.stopka2 
+{ 
+    grid-area: stopka2; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+}
+  
+.stopka3 
+{ 
+    grid-area: stopka3; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+}
+  
+.stopka4 
+{ 
+    grid-area: stopka4; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+    text-align: right;
+    padding-right: 20px;
+}
+.stopkaD 
+{ 
+    grid-area: stopkaD; 
+    color: #909090;
+}
+.nav
+{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #404040;
+    color: #404040;
+}
+
+#numer
+{
+    color: rgb(255, 255, 130);
+}
+#zaloz
+{
+    background-color: rgb(0, 93, 136);
+    color:white;
+    border: none;
+}
+#zaloguj
+{
+    background-color: white;
+    color:white;
+    border: none;
+    color: #909090;
+    padding-left: 40px;
+}
+.napisLogo
+{
+    font-size: 30px;
+    line-height: 10px;
+}
+.navL:link, .navL:visited, .navL:hover, .navL:active
+{
+    text-decoration: none;
+}
+
+.saldo_konta 
+{ 
+    grid-area: saldo_konta; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    border: 2px solid #404040;
+    padding:10px;
+}
+
+.ostatnie_transakcje 
+{ 
+    grid-area: ostatnie_transakcje; 
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #404040;
+    padding:15px;
+}
+
+.przerwa 
+{ 
+    grid-area: przerwa; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.przyciski 
+{ 
+    grid-area: przyciski; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.moje_karty 
+{ 
+    grid-area: moje_karty; 
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #404040;
+    padding:15px;
+}
+#napisy
+{
+    font-weight: bold;
+    font-size: 25px;
+}
+#kasa_napis
+{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 45px;
+}
+#przelej
+{
+    height: 50px;
+    background-color: white;
+    color: #404040;
+    border: #404040 solid 2px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+#przelej:hover
+{
+    background-color: rgb(0, 93, 136);
+    color: white;
+}
+#nazwisko
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#kwota
+{
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+#data
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#wyslij
+{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: #404040;
+    border: #404040 solid 2px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+#wyslij:hover
+{
+    background-color: rgb(0, 93, 136);
+    color: white;
+}
+#spacja
+{
+    padding-left: 50px;
+}
+#zadaj
+{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: #404040;
+    border: #404040 solid 2px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+#zadaj:hover
+{
+    background-color: rgb(0, 93, 136);
+    color: white;
+}
+#bank
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#numer_karty
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#rodzaj
+{
+    font-weight: bold;
+    font-size: 20px;
+}
