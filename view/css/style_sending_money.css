@@ -10,12 +10,12 @@ body
     grid-template-areas:
       "marginesL logo logo logo login login marginesP"
       "marginesL konto transakcje historia portfel ustawienia marginesP"
-      "marginesL wysylanie wysylanie przerwa przerwa przerwa marginesP"
-      "marginesL wysylanie wysylanie przerwa przerwa przerwa marginesP"
+      "marginesL przerwa wysylanie wysylanie wysylanie przerwa2 marginesP"
+      "marginesL przerwa wysylanie wysylanie wysylanie przerwa2 marginesP"
       "marginesL info1 info1 info2 info2 info3 marginesP"
       "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
       "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
-  }
+  } 
   
 .logo 
 { 
@@ -143,12 +143,16 @@ body
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    padding-bottom: 250px;
+    padding-bottom: 100px;
     border: 2px solid #404040;
 }
 #napis
 {
     font-size: 30px;
+    text-align: center;
+    display: block;
+    margin:0 auto;
+
 }
 input
 {
@@ -156,7 +160,9 @@ input
     width: 500px;
     font-size: 30px;
     border-radius: 15px;
-    margin-left: 10px;
+    display: block;
+    margin:0 auto;
+    text-align: center;
 }
 #wyslij
 {
@@ -166,8 +172,8 @@ input
     border: #404040 solid 2px;
     font-size: 15px;
     border-radius: 15px;
-    float: right;
-    margin-right: 40px;
+    display: block;
+    margin: 0 auto;
 }
 #wyslij:hover
 {
@@ -177,4 +183,8 @@ input
 .przerwa 
 { 
     grid-area: przerwa; 
+}
+.przerwa2
+{ 
+    grid-area: przerwa2; 
 }
