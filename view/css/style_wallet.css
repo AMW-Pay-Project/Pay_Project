@@ -12,7 +12,7 @@ body
       "marginesL menu menu menu menu menu marginesP"
       "marginesL dodaj dodaj przerwa saldo saldo marginesP"
       "marginesL panelL1 panelL1 przerwa saldo saldo marginesP"
-      "marginesL panelL2 panelL2 przerwa saldo saldo marginesP"
+      "marginesL karty karty przerwa saldo saldo marginesP"
       "marginesL info1 info1 info2 info2 info3 marginesP"
       "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
       "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
@@ -147,11 +147,9 @@ body
     padding-top: 10px;
 }
 .panelL2
-{ 
-    grid-area: panelL2; 
+{  
     border: #404040 solid 2px;
-    margin-top: 30px;
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .przerwa 
@@ -254,4 +252,10 @@ body
     margin-left: 50px;
     font-weight: bold;
     font-size: 20px;
+}
+.karty
+{
+    grid-area: karty;
+    margin-top: 30px;
+    height: 100%;
 }
