@@ -136,6 +136,10 @@ body
     margin-top: 30px;
     margin-bottom: 30px;
 }
+.przerwa
+{
+    margin-top: 30px;
+}
 .wszystko
 {
     grid-area: wszystko;
