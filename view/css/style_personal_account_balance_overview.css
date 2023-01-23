@@ -9,50 +9,69 @@ body
     grid-auto-flow: row;
     grid-template-areas:
       "marginesL logo logo logo login login marginesP"
-      "marginesL konto transakcje historia portfel ustawienia marginesP"
+      "marginesL menu menu menu menu menu marginesP"
       "marginesL saldo_konta saldo_konta przerwa przyciski przyciski marginesP"
       "marginesL ostatnie_transakcje ostatnie_transakcje przerwa moje_karty moje_karty marginesP"
       "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
       "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
   }
-  
+#menu
+{
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.nav
+{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #404040;
+    color: #404040;
+}
+.navL:link, .navL:visited, .navL:active
+{
+    text-decoration: none;
+    color: black;
+}
+.navL:hover
+{
+    color: rgb(0, 93, 136);
+}
 .logo 
 { 
     grid-area: logo; 
 }
-  
+
 .login 
 { 
     grid-area: login; 
     text-align: right;
     padding-right: 30px;
 }
-  
+
 .ustawienia 
 { 
     grid-area: ustawienia; 
 }
-  
+
 .portfel 
 { 
     grid-area: portfel; 
 }
-  
-.historia 
-{ 
-    grid-area: historia; 
-}
-  
+
 .konto 
 { 
     grid-area: konto;
 }
-  
+
 .transakcje 
 { 
     grid-area: transakcje; 
 }
-  
+
 .stopka1 
 { 
     grid-area: stopka1; 
@@ -60,21 +79,21 @@ body
     background-color: rgb(0, 0, 66);
     padding-left: 20px;
 }
-  
+
 .stopka2 
 { 
     grid-area: stopka2; 
     color: white;
     background-color: rgb(0, 0, 66);
 }
-  
+
 .stopka3 
 { 
     grid-area: stopka3; 
     color: white;
     background-color: rgb(0, 0, 66);
 }
-  
+
 .stopka4 
 { 
     grid-area: stopka4; 
@@ -87,14 +106,6 @@ body
 { 
     grid-area: stopkaD; 
     color: #909090;
-}
-.nav
-{
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #404040;
-    color: #404040;
 }
 
 #numer
@@ -119,10 +130,6 @@ body
 {
     font-size: 30px;
     line-height: 10px;
-}
-.navL:link, .navL:visited, .navL:hover, .navL:active
-{
-    text-decoration: none;
 }
 
 .saldo_konta 
