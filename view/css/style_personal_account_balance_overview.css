@@ -171,7 +171,7 @@ body
 .moje_karty 
 { 
     grid-area: moje_karty; 
-    margin-top: 15px;
+    margin-top:100px;
     margin-right: 10px;
     margin-bottom: 30px;
     border: 2px solid #404040;
@@ -182,13 +182,23 @@ body
     font-weight: bold;
     font-size: 25px;
 }
+.napisy2
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+.napisy3
+{
+    font-weight: bold;
+    font-size: 20px;
+}
 #kasa_napis
 {
     font-weight: bold;
     padding-left: 10px;
     font-size: 45px;
 }
-#przelej
+.przycisk
 {
     height: 50px;
     background-color: white;
@@ -197,7 +207,7 @@ body
     font-size: 15px;
     border-radius: 15px;
 }
-#przelej:hover
+.przycisk:hover
 {
     background-color: rgb(0, 93, 136);
     color: white;
@@ -266,4 +276,15 @@ body
 {
     font-weight: bold;
     font-size: 20px;
+}
+#gora
+{
+    margin-bottom: 30px;
+}
+#dol
+{
+    margin-right: 10px;
+    border: 2px solid #404040;
+    padding:15px;
+    padding-bottom: 60px;
 }
