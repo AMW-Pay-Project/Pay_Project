@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./view/css/style.css">
+        <link rel="stylesheet" href="./view/css/style_personal_account_balance_overview.css">
         <title>Strona główna</title>
     </head>
     <body>
@@ -18,40 +17,56 @@
 			<div class="login">
 				Witaj {user_name} {user_surname} &nbsp;&nbsp;&nbsp; <a href="index.php?page=logout"><button id="zaloguj">Wyloguj się</button></a>
 			</div>
-			<div class="konto">
-				<a href="index.php?page=account" class="navL"><p class="nav">Konto</p></a>
-			</div>
-			<div class="transakcje">
-				<a href="index.php?page=transactions" class="navL"><p class="nav">Transakcje</p></a>
-			</div>
-			<div class="historia">
-				<a href="index.php?page=history" class="navL"><p class="nav">Historia</p></a>
-			</div>
-			<div class="portfel">
-				<a href="index.php?page=wallet" class="navL"><p class="nav">Portfel</p></a>
-			</div>
-			<div class="ustawienia">
-				<a href="index.php?page=settings" class="navL"><p class="nav">Ustawienia</p></a>
-			</div>
-			<div class="mainL">
-				<p id="masz">MASZ TO OD ZARAZ</p>
-                <p id="oferta">Z naszą ofertą <b>wykonasz</b> dowolną transakcję w internecie</p>
-                <p><a id="wiecej" href="index.php?page=more">Więcej</a></p>
+			<div id="menu" class="nav">
+                <div class="konto">
+                    <a href="index.php" class="navL"><p>Pulpit nawigacyjny</p></a>
+                </div>
+                <div class="transakcje">
+                    <a href="index.php?page=transactions" class="navL"><p>Transakcje</p></a>
+                </div>
+                <div class="portfel">
+                    <a href="index.php?page=wallet" class="navL"><p>Portfel</p></a>
+                </div>
+                <div class="ustawienia">
+                    <a href="index.php?page=settings" class="navL"><p>Ustawienia</p></a>
+                </div>
             </div>
-            <div class="mainR">
-                <img src="./view/images/GigaOgrod.png" style="float:left;" height="400px">
+            <div class="saldo_konta">
+                <a id="napisy">Saldo konta użytkownika</a>
+                <br>
+                <a id="kasa_napis">{account_balance} PLN</a>
+                <br>
+                <a href="index.php?page=add_cash"><button id="przelej">Doładuj konto</button></a>
             </div>
-            <div class="info1">
-                <p>Przykładowa informacja nr 1</p>
-                <p>Przykładowa informacja nr 1</p>
-                <p>Przykładowa informacja nr 1</p>
-                <p>Przykładowa informacja nr 1</p>
+            <div class="ostatnie_transakcje">
+                <a id="napisy">Ostatnie transakcje</a>
+                <br><br>
+                <a id="nazwisko">{transactionOneName}</a>
+                <a id="kwota">{transactionOneAmount}</a>
+                <br>
+                <a id="data">{transactionOneDate}</a>
+                <hr><br>
+                <a id="nazwisko">{transactionTwoName}</a>
+                <a id="kwota">{transactionTwoAmount}</a>
+                <br>
+                <a id="data">{transactionTwoDate}</a>
+                <hr><br>
+                <a id="nazwisko">{transactionThreeName}</a>
+                <a id="kwota">{transactionThreeAmount}</a>
+                <br>
+                <a id="data">{transactionThreeDate}</a>
             </div>
-            <div class="info2">
-                <p>Przykładowa informacja nr 2</p>
+            <div class="przerwa">
             </div>
-            <div class="info3">
-                <p>Przykładowa informacja nr 3</p>
+            <div class="przyciski">
+                <a id="spacja"></a>
+                <a href="index.php?page=send_money"><button id="wyslij">Wyślij pieniądze</button></a>
+                <a id="spacja"></a>
+                <a href="index.php?page=demand_money"><button id="zadaj">Żądaj pieniędzy</button></a>
+            </div>
+            <div class="moje_karty">
+                <a id="napisy">Moje karty bankowe</a>
+                {cards}
             </div>
             <div class="stopka1">
                 <p>Polityka prywatności</p>
