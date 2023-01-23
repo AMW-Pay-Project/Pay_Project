@@ -9,7 +9,7 @@ body
     grid-auto-flow: row;
     grid-template-areas:
       "marginesL logo logo logo login login marginesP"
-      "marginesL konto transakcje historia portfel ustawienia marginesP"
+      "marginesL menu menu menu menu menu marginesP"
       "marginesL dodaj dodaj przerwa saldo saldo marginesP"
       "marginesL panelL1 panelL1 przerwa saldo saldo marginesP"
       "marginesL panelL2 panelL2 przerwa saldo saldo marginesP"
@@ -17,7 +17,31 @@ body
       "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
       "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
   }
-  
+ #menu
+{
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.nav
+{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #404040;
+    color: #404040;
+}
+.navL:link, .navL:visited, .navL:active
+{
+    text-decoration: none;
+    color: black;
+}
+.navL:hover
+{
+    color: rgb(0, 93, 136);
+} 
 .logo 
 { 
     grid-area: logo; 
@@ -38,11 +62,6 @@ body
 .portfel 
 { 
     grid-area: portfel; 
-}
-  
-.historia 
-{ 
-    grid-area: historia; 
 }
   
 .konto 
@@ -90,14 +109,6 @@ body
     grid-area: stopkaD; 
     color: #909090;
 }
-.nav
-{
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #404040;
-    color: #404040;
-}
 
 #numer
 {
@@ -121,10 +132,6 @@ body
 {
     font-size: 30px;
     line-height: 10px;
-}
-.navL:link, .navL:visited, .navL:hover, .navL:active
-{
-    text-decoration: none;
 }
 .dodaj
 { 

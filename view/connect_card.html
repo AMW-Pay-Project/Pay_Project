@@ -17,19 +17,19 @@
             <div class="przerwaL"></div>
             <div class="main" style="margin-top:20%;">
                 <p id="napis">Powiąż kartę</p>
-                <form>
-                    <input type="number" id="nr_karty" placeholder="Numer karty debetowej lub kredytowej">
+                <form action="index.php?page=connect_card" method="post">
+					<input type="hidden" name="sendForm" value="true">
+                    <input type="number" id="nr_karty" name="cardNumber"  pattern="[0-9]{16}" size="16" minlength="16" maxlength="16"  placeholder="Numer karty debetowej lub kredytowej" required>
                     <br>
-                    <select id="typ_karty">
-                        <option>Wybierz typ karty</option>
+                    <a id="napis2">Wybierz rodzaj karty: </a>
+                        <select id="typ_karty" name="cardId">
                         <option>Visa</option>
+                        <option>Mastercard</option>
                     </select>
                     <br>
-                    <input type="text" id="waznosc_karty" pattern="[0-9]{2}/[0-9]{4}" placeholder="mm/rrrr">
+                    <input type="text" id="waznosc_karty" name="cardExpiration" pattern="[0-9]{2}/[0-9]{4}" size="7" minlength="7" maxlength="7" placeholder="mm/rrrr" required>
                     <br>
-                    <input type="number" id="kod" pattern="[0-9]{3}" placeholder="Kod bezpieczeństwa CVC">
-                    <br>
-                    <input type="text" id="address" name="address" placeholder="Wprowadź swój adres rozliczeniowy">
+                    <input type="number" id="kod" name="cardCvc" pattern="[0-9]{3}" size="3" minlength="3" maxlength="3" placeholder="Kod bezpieczeństwa CVC" required>
                     <br>
                     <button id="powiaz">Powiąż</button>
                 </form>
