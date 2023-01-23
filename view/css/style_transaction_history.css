@@ -4,20 +4,14 @@ body
 }
 .container {  display: grid;
     grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
-    grid-template-rows: 15% 10% 8.125 8.125 8.125 8.125 8.125 8.125 8.125 8.125 5% 5%;
+    grid-template-rows: 15% 10% 10% 55% 5% 5%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "marginesL logo logo logo login login marginesP"
       "marginesL menu menu menu menu menu marginesP"
       "marginesL wyszukaj wyszukaj wyszukaj wyszukaj wyszukaj marginesP"
-      "marginesL trans trans trans trans trans marginesP"
-      "marginesL trans trans trans trans trans marginesP"
-      "marginesL trans trans trans trans trans marginesP"
-      "marginesL trans trans trans trans trans marginesP"
-      "marginesL trans trans trans trans trans marginesP"
-      "marginesL trans trans trans trans trans marginesP"
-      "marginesL trans trans trans trans trans marginesP"
+      "marginesL wszystko wszystko wszystko wszystko wszystko marginesP"
       "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
       "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP";
   }
@@ -139,8 +133,26 @@ body
 .wyszukaj
 { 
     grid-area: wyszukaj;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.wszystko
+{
+    grid-area: wszystko;
+    margin-bottom: 30px;
 }
 .trans
-{ 
-    grid-area: trans;
+{
+    height: 100px;
+    width: 1000px;
+    border: 2px solid #404040;
+    margin-bottom: 10px;
+}
+input
+{
+    height: 50px;
+    width: 1000px;
+    font-size: 30px;
+    border-radius: 15px;
+    padding-left: 30px;
 }
