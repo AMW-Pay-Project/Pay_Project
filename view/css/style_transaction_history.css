@@ -144,6 +144,7 @@ body
 {
     grid-area: wszystko;
     margin-bottom: 30px;
+    height: 430px;
 }
 .trans
 {
@@ -151,6 +152,7 @@ body
     width: 1000px;
     border: 2px solid #404040;
     margin-bottom: 10px;
+    padding: 10px;
 }
 input
 {
@@ -159,4 +161,27 @@ input
     font-size: 30px;
     border-radius: 15px;
     padding-left: 30px;
+}
+.napis1
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.napis2
+{
+    font-size: 20px;
+}
+.kasa_ziel
+{
+    color: green;
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
+}
+.kasa_czer
+{
+    color: red;
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
 }
