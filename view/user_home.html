@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/view/css/style_personal_account_balance_overview.css">
+        <link rel="stylesheet" href="/view/css/style_user_home.css">
         <title>Strona główna</title>
     </head>
     <body>
@@ -68,15 +68,7 @@
                 <div id="dol">
                     <a id="napisy">Ostatnie żądania</a>
                     <hr>
-                    <a class="napisy2">Imie</a>
-                    <a class="napisy2">nazwisko</a>
-                    <br>
-                    <a class="napisy2">Data żądania</a>
-                    <br>
-                    <a class="napisy3">Kwota</a>
-                    <br>
-                    <button style="float: right;" id="akceptuj" class="przycisk">Akceptuj</button></a>
-                    <button style="float: right;" id="odrzuc" class="przycisk">Odrzuć</button></a>
+					{demands}
                 </div>
             </div>
             <div class="moje_karty">
@@ -96,7 +88,7 @@
                 <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
             </div>
             <div class="stopkaD">
-                <p>&copy; 2022 AMW PP Polska</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
             </div>
           </div>
     </body>
