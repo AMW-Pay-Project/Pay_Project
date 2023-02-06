@@ -2,18 +2,13 @@
 
 	$mail = $core->clearText($_GET['MAIL']);
 
-	$query = $database->prepare("SELECT `id`, `activation_code` FROM `users` WHERE `email`=:mail LIMIT 1");
-	$query->bindValue("mail", $mail, PDO::PARAM_STR);
-	$query->execute();
+	$user = new User($mail);
 	
-	if($query->rowCount() > 0) {
-		$fetch = $query->fetch();
+	if($user->getId() != -1) {
 		$code = $core->clearText($_GET['CODE']);
 	
-		if($fetch['activation_code'] == $code) {
-			$query = $database->prepare("UPDATE `users` SET `isActive`=1 WHERE `id`=:one");
-			$query->bindValue(":one", $fetch['id'], PDO::PARAM_INT);
-			$query->execute();
+		if($user->getActivationCode() == $code) {
+			$user->setIsActive(1);
 			
 			$view->load('info');
 				$view->add('title', ' Konto aktywne');

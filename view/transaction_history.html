@@ -31,32 +31,11 @@
                     <a href="index.php?page=settings" class="navL"><p>Ustawienia</p></a>
                 </div>
             </div>
-            <div class="wyszukaj">
+            <!--<div class="wyszukaj">
                 <input type="text" id="szukaj" placeholder="&#128269 Wyszukaj według imienia i nazwiska/nazwy lub adresu e-mail"></input>
-            </div>
+            </div>-->
             <div class="wszystko" style="overflow-y: scroll;">
-                <div class="trans">
-                    <a class="napis1">Imię</a>
-                    <a class="napis1">Nazwisko</a>
-                    <br><br>
-                    <a class="napis2">Data</a>
-                    <a class="napis2">&#183;</a>
-                    <a class="napis2">Anulowano</a>
-                    <a class="napis2">&#183;</a>
-                    <a class="napis2">Żądanie wysłane</a>
-                    <a class="kasa_ziel">+0,01 PLN</a>
-                </div>
-                <div class="trans">
-                    <a class="napis1">Imię</a>
-                    <a class="napis1">Nazwisko</a>
-                    <br><br>
-                    <a class="napis2">Data</a>
-                    <a class="napis2">&#183;</a>
-                    <a class="napis2">Anulowano</a>
-                    <a class="napis2">&#183;</a>
-                    <a class="napis2">Żądanie wysłane</a>
-                    <a class="kasa_czer">-0,01 PLN</a>
-                </div>
+                {transactions}
             </div>
             <div class="stopka1">
                 <p>Polityka prywatności</p>
@@ -71,7 +50,7 @@
                 <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
             </div>
             <div class="stopkaD">
-                <p>&copy; 2022 AMW PP Polska</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
             </div>
           </div>
     </body>

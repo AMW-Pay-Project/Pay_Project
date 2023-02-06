@@ -135,6 +135,8 @@ body
     grid-area: wyszukaj;
     margin-top: 30px;
     margin-bottom: 30px;
+	display: block;
+	margin: 0 auto;
 }
 .przerwa
 {
@@ -143,8 +145,10 @@ body
 .wszystko
 {
     grid-area: wszystko;
-    margin-bottom: 30px;
     height: 430px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
 }
 .trans
 {
