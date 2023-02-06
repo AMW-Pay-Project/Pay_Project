@@ -42,14 +42,9 @@
                 <a class="kasa_napis">{account_balance} PLN</a>
             </div>
             <div class="karty" style="overflow-y: scroll;">
-                <div class="panelL2" onclick="location.href='wallet_card.html';" style="cursor:pointer; height: 93%;">
-                    <img src="./view/images/visa.png" style="float:left;" height="80px">
-                    <a class="napis">Karta PKO Visa</a>
-                    <br><br>
-                    <a class="karta_napis">Debetowa **1234</a>
-                </div>
+				{cards}
             </div>
-			{cards}
+			
             <div class="przerwa">
             </div>
             
@@ -73,6 +68,10 @@
                 <img src="./view/images/us.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
                 <a id="kraj">USD</a>
                 <a id="kwota">{account_balance_usd} USD</a>
+				<br><br><br>
+                <img src="./view/images/eu.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
+                <a id="kraj">EUR</a>
+                <a id="kwota">{account_balance_euro} EUR</a>
             </div>
             </div>
             <div class="stopka1">
@@ -88,7 +87,7 @@
                 <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
             </div>
             <div class="stopkaD">
-                <p>&copy; 2022 AMW PP Polska</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
             </div>
           </div>
     </body>

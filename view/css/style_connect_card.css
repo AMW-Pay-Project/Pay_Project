@@ -59,6 +59,12 @@ body
     font-size: 30px;
     text-align: center;
 }
+#napis2
+{
+	margin-top: -4px;
+    font-size: 15px;
+    text-align: center;
+}
 input, select
 {
     width: 60%;

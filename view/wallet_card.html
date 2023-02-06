@@ -42,14 +42,9 @@
                 <a class="kasa_napis">{account_balance} PLN</a>
             </div>
             <div class="karty" style="overflow-y: scroll;">
-                <div class="panelL2" onclick="location.href='wallet_card.html';" style="cursor:pointer; height: 93%;">
-                    <img src="./view/images/visa.png" style="float:left;" height="80px">
-                    <a class="napis">Karta PKO Visa</a>
-                    <br><br>
-                    <a class="karta_napis">Debetowa **1234</a>
-                </div>
+				{cards}
             </div>
-            {cards}
+            
             <div class="przerwa">
             </div>
             <div class="saldo">
@@ -73,7 +68,7 @@
                     <a class="napis4">{postcode} {city}</a>
 				</div>
 				
-				<a href="index.php?page=delete_card&id={cardId}"><button id="przycisk">Usuń kartę</button></a>
+				<a href="index.php?page=delete_card&id={cardId}"><button id="przycisk" style="float: right; margin-right: 10px;">Usuń kartę</button></a>
             </div>
 			
             <div class="stopka1">
@@ -89,7 +84,7 @@
                 <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
             </div>
             <div class="stopkaD">
-                <p>&copy; 2022 AMW PP Polska</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
             </div>
           </div>
     </body>

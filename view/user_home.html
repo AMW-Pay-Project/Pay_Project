@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./view/css/style_personal_account_balance_overview.css">
+        <link rel="stylesheet" href="/view/css/style_user_home.css">
         <title>Strona główna</title>
     </head>
     <body>
@@ -36,7 +36,7 @@
                 <br>
                 <a id="kasa_napis">{account_balance} PLN</a>
                 <br>
-                <a href="index.php?page=add_cash"><button id="przelej">Doładuj konto</button></a>
+                <a href="index.php?page=add_cash"><button id="przelej" class="przycisk">Doładuj konto</button></a>
             </div>
             <div class="ostatnie_transakcje">
                 <a id="napisy">Ostatnie transakcje</a>
@@ -59,10 +59,17 @@
             <div class="przerwa">
             </div>
             <div class="przyciski">
-                <a id="spacja"></a>
-                <a href="index.php?page=send_money"><button id="wyslij">Wyślij pieniądze</button></a>
-                <a id="spacja"></a>
-                <a href="index.php?page=demand_money"><button id="zadaj">Żądaj pieniędzy</button></a>
+                <div id="gora">
+                    <a id="spacja"></a>
+                    <a href="index.php?page=send_money"><button id="wyslij">Wyślij pieniądze</button></a>
+                    <a id="spacja"></a>
+                    <a href="index.php?page=demand_money"><button id="zadaj">Żądaj pieniędzy</button></a>
+                </div>
+                <div id="dol">
+                    <a id="napisy">Ostatnie żądania</a>
+                    <hr>
+					{demands}
+                </div>
             </div>
             <div class="moje_karty">
                 <a id="napisy">Moje karty bankowe</a>
@@ -81,7 +88,7 @@
                 <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
             </div>
             <div class="stopkaD">
-                <p>&copy; 2022 AMW PP Polska</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
             </div>
           </div>
     </body>
