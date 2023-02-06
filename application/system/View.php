@@ -36,6 +36,24 @@
 			echo $this->htmlBody;
 		}
 		
+		function parseFile($fileName, $tagList) {
+			$fileBody = '';
+			
+			$file = './view/'.$fileName.'.html';
+		
+			$openedFile = fopen($file, "r");
+		
+			$fileBody = fread($openedFile, filesize($file));
+		
+			fclose($openedFile);
+			
+			foreach($tagList as $tag => $value) {
+				$fileBody = str_replace($tag, $value, $fileBody);
+			}
+			
+			return $fileBody;
+		}
+		
 	}
 	
 ?>
