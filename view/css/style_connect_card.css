@@ -1,0 +1,88 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container 
+{  
+    display: grid;
+    grid-template-columns: 10% 25% 30% 25% 10%;
+    grid-template-rows: 20% 60% 20%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "marginesL baner baner baner marginesP"
+      "marginesL przerwaL main przerwaP marginesP"
+      "marginesL przerwaL main przerwaP marginesP";
+}
+  
+.marginesL 
+{ 
+    grid-area: marginesL; 
+}
+  
+.marginesP 
+{ 
+    grid-area: marginesP; 
+}
+  
+.baner 
+{ 
+    grid-area: baner; 
+}
+  
+.przerwaL 
+{ 
+    grid-area: przerwaL; 
+}
+  
+.przerwaP 
+{ 
+    grid-area: przerwaP; 
+}
+  
+.main 
+{ 
+    grid-area: main; 
+    border: solid 1px #909090;
+    box-shadow: 5px 5px 5px #909090,-5px -5px 5px #909090;
+    line-height: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.napisLogo
+{
+    font-size: 30px;
+    line-height: 10px;
+}
+#napis
+{
+    font-size: 30px;
+    text-align: center;
+}
+#napis2
+{
+	margin-top: -4px;
+    font-size: 15px;
+    text-align: center;
+}
+input, select
+{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+#stopka
+{
+    color: #909090;
+    text-align:center;
+    font-size: 10px;
+}
+#powiaz
+{
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+}
