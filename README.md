@@ -1,1 +1,0 @@
-# Github projektu - Pay Project

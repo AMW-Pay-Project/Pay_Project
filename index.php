@@ -1,8 +1,8 @@
 <?php
 
-	error_reporting(0);
-
 	ob_start();
+	
+		error_reporting(0);
 	
 		session_start();
 		
@@ -18,12 +18,24 @@
 		$core = new Core();
 		$view = new View();
 		
-		$page = $core->clearText($_GET['page']);
-		$page = str_replace('/', '', $page);
-
-		if(!$page || $page == '') { $page = 'home'; }
+		$page = null;
 		
-		$sessionStatus = $_SESSION['logged'] <> true ? 'guest':'user';
+		if(isset($_GET['page'])) {
+			$page = $core->clearText($_GET['page']);
+			$page = str_replace('/', '', $page);
+		} else {
+			$page = 'home'; 
+		}
+		
+		$sessionStatus = null;
+		$sessionUser = null;
+		
+		if(isset($_SESSION['logged']) && isset($_SESSION['userId'])) {
+			$sessionStatus = 'user';
+			$sessionUser = new User($_SESSION['userId']);
+		} else {
+			$sessionStatus = 'guest';
+		}
 		
 		if(file_exists('./model/'.$sessionStatus.'/'.$page.'.php')) {
 			require_once('./model/'.$sessionStatus.'/'.$page.'.php');
