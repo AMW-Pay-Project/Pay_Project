@@ -1,13 +1,11 @@
 <?php
 
-	if($_POST['sendRegisterForm']) {
+	if(isset($_POST['sendRegisterForm'])) {
 		$mail = $core->clearText($_POST['email']);
 		
-		$query = $database->prepare("SELECT `email` FROM `users` WHERE `email`=:mail LIMIT 1");
-		$query->bindValue("mail", $mail, PDO::PARAM_STR);
-		$query->execute();
+		$user = new User($mail);
 		
-		if($query->rowCount() > 0) {
+		if($user->getId() != -1) {
 			$view->load('info');
 				$view->add('title', ' Błąd rejestracji');
 				$view->add('header', 'Błąd rejestracji!');
@@ -21,18 +19,18 @@
 			if($pass == $passRepeat) {
 				if(preg_match("#.*^(?=.{10,32})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $pass)) {
 					$randomString = $core->randomString(10);
-				
-					$query = $database->prepare("INSERT INTO `users` VALUES(NULL, :mail, :pass, :name, :surname, :birthday, :address, :postcode, :city, 0, :activation);");
-						$query->bindValue(":mail", $mail, PDO::PARAM_STR);
-						$query->bindValue(":pass", sha1(md5($pass)), PDO::PARAM_STR);
-						$query->bindValue(":name", $core->clearText($_POST['name']), PDO::PARAM_STR);
-						$query->bindValue(":surname", $core->clearText($_POST['surname']), PDO::PARAM_STR);
-						$query->bindValue(":birthday", $core->clearText($_POST['birthday']), PDO::PARAM_STR);
-						$query->bindValue(":address", $core->clearText($_POST['address']), PDO::PARAM_STR);
-						$query->bindValue(":postcode", $core->clearText($_POST['postcode']), PDO::PARAM_STR);
-						$query->bindValue(":city", $core->clearText($_POST['city']), PDO::PARAM_STR);
-						$query->bindValue(":activation", $randomString, PDO::PARAM_STR);
-					$query->execute();
+					
+					User::newUser(
+						$mail,
+						sha1(md5($pass)),
+						$core->clearText($_POST['name']),
+						$core->clearText($_POST['surname']),
+						$core->clearText($_POST['birthday']),
+						$core->clearText($_POST['address']),
+						$core->clearText($_POST['postcode']),
+						$core->clearText($_POST['city']),
+						$randomString
+					);
 				
 					$message = "<b><a href=\"https://".$_SERVER['SERVER_NAME']."/index.php?page=activation&MAIL=".$mail."&CODE=".$randomString."\">Kliknij aby aktywowac konto</a></b>";
 				

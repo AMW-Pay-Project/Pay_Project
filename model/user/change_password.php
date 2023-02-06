@@ -5,19 +5,10 @@
 		$newPassword = $core->clearText($_POST['newPassword']);
 		$newPasswordRepeat = $core->clearText($_POST['newPasswordRepeat']);
 		
-		$query = $database->prepare("SELECT `password` FROM `users` WHERE `id`=:one");
-			$query->bindValue(":one", $_SESSION['userId'], PDO::PARAM_INT);
-		$query->execute();
-		
-		$fetch = $query->fetch();
-		
-		if($fetch['password'] == sha1(md5($oldPassword))) {
+		if($sessionUser->getPassword() == sha1(md5($oldPassword))) {
 			if($newPassword == $newPasswordRepeat) {
 				if(preg_match("#.*^(?=.{10,32})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $newPassword)) {
-					$query = $database->prepare("UPDATE `users` SET `password`=:one WHERE `id`=:two");
-						$query->bindValue(":one", sha1(md5($newPassword)), PDO::PARAM_STR);
-						$query->bindValue(":two", $_SESSION['userId'], PDO::PARAM_INT);
-					$query->execute();
+					$sessionUser->setPassword(sha1(md5($newPassword)));
 					
 					$view->load('info');
 						$view->add('title', ' Hasło zmienione');
