@@ -1,7 +1,7 @@
 <?php
 	
-	$databaseHost = 'server';
-	$databaseName = 'name';
+	$databaseHost = 'serverip';
+	$databaseName = 'database';
 	$databaseUser = 'username';
 	$databasePass = 'password';
 
