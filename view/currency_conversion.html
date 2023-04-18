@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/view/css/currency_conversion.css">
+        <title>Strona główna</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <a href="index.php" style="text-decoration:none; color:black;">
+                    <img src="/view/images/logo.png" style="float:left;" height="150px">
+                    <p class="napisLogo">AMW</p>
+                    <p class="napisLogo">Pay</p>
+                    <p class="napisLogo">Project</p>  
+                </a>
+            </div>
+			<div class="login">
+				Witaj {user_name} {user_surname} &nbsp;&nbsp;&nbsp; <a href="index.php?page=logout"><button id="zaloguj">Wyloguj się</button></a>
+			</div>
+			<div class="konto">
+				<a href="index.php?page=account" class="navL"><p class="nav">Konto</p></a>
+			</div>
+			<div class="transakcje">
+				<a href="index.php?page=transactions" class="navL"><p class="nav">Transakcje</p></a>
+			</div>
+			<div class="historia">
+				<a href="index.php?page=history" class="navL"><p class="nav">Historia</p></a>
+			</div>
+			<div class="portfel">
+				<a href="index.php?page=wallet" class="navL"><p class="nav">Portfel</p></a>
+			</div>
+			<div class="ustawienia">
+				<a href="index.php?page=settings" class="navL"><p class="nav">Ustawienia</p></a>
+			</div>
+            <div class="przewalutowanie">
+                <p class="napis">Wpisz kwotę którą chcesz przewalutować</p>
+                <input type="number">
+                <p class="napis">Wybierz z której kwoty chcesz wymienić walute</p>
+                <select>
+                    <option value="PLN">PLN</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                  </select>
+                  <p class="napis">Wybierz na którą kwotę chcesz wymienić walute</p>
+                <select>
+                    <option value="PLN">PLN</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                  </select>
+                  <p class="napis4">Szacunkowa kwota którą otrzymasz po przewalutowaniu: KWOTA</p>
+                  <button id="przycisk">Przewalutuj</button>
+            </div>
+            <div class="kalkulator">
+                <div class="gora">
+                    <br>
+                    <a class="napis2">Kalkulator walut</a><br>
+                    <br>
+                    <a class="napis3">Szacunkowa suma we wszystkich walutach</a>
+                    <br><br>
+                </div>
+                    <br><br>
+                    <div class="dol">
+                    <img src="/view/images/pl.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
+                    <a id="kraj">PLN</a>
+                    <a id="kwota">kwota PLN</a>
+                    <br><br><br>
+                    <img src="/view/images/us.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
+                    <a id="kraj">USD</a>
+                    <a id="kwota">kwota USD</a>
+                    <br><br><br>
+                    <img src="/view/images/eu.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
+                    <a id="kraj">EUR</a>
+                    <a id="kwota">kwota EUR</a>
+            </div>
+            </div>
+            <div class="stopka1">
+                <p>Polityka prywatności</p>
+            </div>
+            <div class="stopka2">
+                <p>Regulamin strony internetowej</p>
+            </div>
+            <div class="stopka3">
+
+            </div>
+            <div class="stopka4">
+                <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
+            </div>
+            <div class="stopkaD">
+                <p>&copy; 2022 AMW PP Polska</p>
+            </div>
+          </div>
+    </body>
+</html>

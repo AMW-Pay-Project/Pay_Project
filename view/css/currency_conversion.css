@@ -1,0 +1,245 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    display: grid; 
+    grid-template-columns: 10% 16% 16% 16% 16% 16% 10%; 
+    grid-template-rows: 15% 10% 25% 25% 15% 5% 5%; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "marginesL logo logo logo login login marginesP"
+      "marginesL konto transakcje historia portfel ustawienia marginesP"
+      "marginesL przewalutowanie przewalutowanie przewalutowanie kalkulator kalkulator marginesP"
+      "marginesL przewalutowanie przewalutowanie przewalutowanie kalkulator kalkulator marginesP"
+      "marginesL info1 info1 info2 info2 info3 marginesP"
+      "marginesL stopka1 stopka2 stopka3 stopka4 stopka4 marginesP"
+      "marginesL stopkaD stopkaD stopkaD stopkaD stopkaD marginesP"; 
+  }
+
+.marginesL 
+{ 
+    grid-area: marginesL; 
+}
+
+.marginesP 
+{ 
+    grid-area: marginesP; 
+}
+
+.logo 
+{ 
+    grid-area: logo; 
+}
+  
+.login 
+{ 
+    grid-area: login; 
+    text-align: right;
+    padding-right: 30px;
+}
+  
+.ustawienia 
+{ 
+    grid-area: ustawienia; 
+}
+  
+.portfel 
+{ 
+    grid-area: portfel; 
+}
+  
+.historia 
+{ 
+    grid-area: historia; 
+}
+  
+.konto 
+{ 
+    grid-area: konto;
+}
+  
+.transakcje 
+{ 
+    grid-area: transakcje; 
+}
+  
+.info1 
+{ 
+    grid-area: info1; 
+}
+  
+.info2 
+{ 
+    grid-area: info2; 
+}
+  
+.info3 
+{ 
+    grid-area: info3; 
+}
+  
+.stopka1 
+{ 
+    grid-area: stopka1; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+    padding-left: 20px;
+}
+  
+.stopka2 
+{ 
+    grid-area: stopka2; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+}
+  
+.stopka3 
+{ 
+    grid-area: stopka3; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+}
+  
+.stopka4 
+{ 
+    grid-area: stopka4; 
+    color: white;
+    background-color: rgb(0, 0, 66);
+    text-align: right;
+    padding-right: 20px;
+}
+.stopkaD 
+{ 
+    grid-area: stopkaD; 
+    color: #909090;
+}
+.nav
+{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #404040;
+    color: #404040;
+}
+#zaloz
+{
+    background-color: rgb(0, 93, 136);
+    color:white;
+    border: none;
+}
+#zaloguj
+{
+    background-color: white;
+    color:white;
+    border: none;
+    color: #909090;
+    padding-left: 40px;
+}
+.napisLogo
+{
+    font-size: 30px;
+    line-height: 10px;
+}
+.navL:link, .navL:visited, .navL:hover, .navL:active
+{
+    text-decoration: none;
+}
+.kalkulator 
+{ 
+    grid-area: kalkulator; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    border: 2px solid #404040;
+    padding:10px;
+}
+
+.przewalutowanie 
+{ 
+    grid-area: przewalutowanie; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding:10px;
+}
+
+.napis
+{
+    font-size: 30px;
+    text-align: center;
+}
+
+p
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+select, input
+{
+    height: 50px;
+    width: 500px;
+    font-size: 30px;
+    border-radius: 15px;
+    display: block;
+    margin:0 auto;
+    text-align: center;
+}
+
+.napis2
+{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.napis3
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.napis4
+{
+    font-size: 25px;
+    text-align: center;
+}
+#kraj
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#kwota
+{
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.gora
+{
+    text-align: center;
+}
+
+.dol
+{
+    margin-bottom: 300px;
+}
+#przycisk
+{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: #404040;
+    border: #404040 solid 2px;
+    font-size: 15px;
+    border-radius: 15px;
+    display: block;
+    margin:0 auto;
+}
+#przycisk:hover
+{
+    background-color: #104a64;
+    color: white;
+}
