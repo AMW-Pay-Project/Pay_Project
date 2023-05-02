@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./view/css/employee_login_style.css">
+        <title>Logowanie</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="marginesL"></div>
+            <div class="baner">
+                <a href="index.php"><img src="./view/images/logo.png" style="float:left;" height="150px"></a>
+                <p class="napisLogo">AMW</p>
+                <p class="napisLogo">Pay</p>
+                <p class="napisLogo">Project</p>
+            </div>
+            <div class="przerwaL"></div>
+            <div class="main" style="margin-top:20%;">
+                <p id="napis">Logowanie do konta pracowniczego</p>
+                <form method="post" id="logowanie" action="index.php?page=login">
+					<input type="hidden" name="sendLoginForm" value="true">
+                    <p class="naz">E-mail</p>
+					<input class="inpt" type="text" name="email" required>
+                    <p class="naz">Hasło</p>
+					<input class="inpt" type="password" name="password" required>
+                    <p></p>
+                    <a id="centrujL"><button id="zaloguj">Zaloguj</button></a>
+                </form>
+				<br><br>
+                <p id="stopka">&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
+            </div>
+            <div class="przerwaP"></div>
+            <div class="marginesP"></div>
+		</div>
+    </body>
+</html>
