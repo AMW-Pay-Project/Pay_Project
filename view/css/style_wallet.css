@@ -139,6 +139,17 @@ body
     padding-left: 500px;
     padding-top: 10px;
 }
+.zmien_portfel
+{ 
+    padding-left: 140px;
+    padding-top: 50px;
+}
+.przewalutowanie
+{ 
+    grid-area: przewalutowanie;
+    padding-left: 500px;
+    padding-top: 10px;
+}
 .panelL1
 { 
     grid-area: panelL1; 
@@ -199,6 +210,12 @@ body
 .napis4
 {
     font-size: 15px;
+}
+.napis5
+{
+    font-size: 25px;
+    font-weight: bold;
+    
 }
 #przycisk
 {

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./view/css/style_wallet.css">
-        <title>PayProject :: Portfel</title>
+        <title>PayProject :: Portfel EURO</title>
     </head>
     <body>
         <div class="container">
@@ -32,17 +32,14 @@
                     <a href="index.php?page=settings" class="navL"><p>Ustawienia</p></a>
                 </div>
             </div>
-			<div class="dodaj">
-                <a href="index.php?page=connect_card"><button id="przycisk_dodaj">Powiąż kartę</button></a>
-            </div>
             <div class="dodaj">
                 <a href="index.php?page=connect_card"><button id="przycisk_dodaj">Powiąż kartę</button></a>
             </div>
-            <div class="panelL1" onclick="location.href='index.php?page=wallet';" style="cursor:pointer">
+            <div class="panelL1" onclick="location.href='index.php?page=wallet_euro';" style="cursor:pointer">
                 <img src="./view/images/logo_pp.png" style="float:left;" height="80px">
                 <a class="napis">Saldo konta Pay Project</a>
                 <br>
-                <a class="kasa_napis">{account_balance} PLN</a>
+                <a class="kasa_napis">{account_balance_euro} EUR</a>
             </div>
             <div class="karty" style="overflow-y: scroll;">
 				{cards}
@@ -56,14 +53,18 @@
                 <br>
                 <a class="napis">Saldo konta Pay Project</a>
                 <br>
-                <a class="kasa_napis">{account_balance} PLN</a>
+                <a class="kasa_napis">{account_balance_euro} EUR</a>
                 <br>
                 <a class="napis2">Szacunkowa suma we wszystkich walutach</a>
                 <br><br>
                 <a href="index.php?page=add_cash"><button id="przycisk">Doładuj konto</button></a>
 				<a href="index.php?page=currency_conversion"><button id="przycisk">Przewalutowanie</button></a>
             </div>
-                <br><br>
+				<br><br>
+                <img src="./view/images/eu.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
+                <a id="kraj">EUR</a>
+                <a id="kwota">{account_balance_euro} EUR</a>
+				<br><br><br>
                 <div class="dol">
                 <img src="./view/images/pl.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
                 <a id="kraj">PLN</a>
@@ -72,10 +73,6 @@
                 <img src="./view/images/us.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
                 <a id="kraj">USD</a>
                 <a id="kwota">{account_balance_usd} USD</a>
-				<br><br><br>
-                <img src="./view/images/eu.png" style="float:left; border: #404040 solid 2px; margin-left: 200px;" height="30px">
-                <a id="kraj">EUR</a>
-                <a id="kwota">{account_balance_euro} EUR</a>
             </div>
             <div class="zmien_portfel">
                 <a href="index.php?page=wallet"><button id="przycisk_dodaj">Portfel PLN</button></a>
