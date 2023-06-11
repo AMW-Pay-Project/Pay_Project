@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./view/css/style_transaction_history.css">
+        <title>PayProject :: Blokada kont</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <a href="index.php?page=employee" style="text-decoration:none; color:black;">
+                    <img src="./view/images/logo.png" style="float:left;" height="150px">
+                    <p class="napisLogo">AMW</p>
+                    <p class="napisLogo">Pay</p>
+                    <p class="napisLogo">Project</p>  
+                </a>
+            </div>
+			<div class="login">
+				Witaj {user_name} {user_surname} &nbsp;&nbsp;&nbsp; <a href="index.php?page=logout"><button id="zaloguj">Wyloguj się</button></a>
+			</div>
+			<div id="menu" class="nav">
+                <div>
+                    <a href="index.php?page=employee" class="navL"><p>Strona główna</p></a>
+                </div>
+                <div>
+                    <a href="#" class="navL"><p>Weryfikowanie transakcji</p></a>
+                </div>
+                <div>
+                    <a href="#" class="navL"><p>Weryfikowanie żądań</p></a>
+                </div>
+                <div>
+                    <a href="index.php?page=employee_block_users" class="navL"><p>Blokada kont</p></a>
+                </div>
+            </div>
+            <!--<div class="wyszukaj">
+                <input type="text" id="szukaj" placeholder="&#128269 Wyszukaj według imienia i nazwiska/nazwy lub adresu e-mail"></input>
+            </div>-->
+            <div class="wszystko" style="overflow-y: scroll;">
+                {users}
+            </div>
+            <div class="stopka1">
+                <p>Polityka prywatności</p>
+            </div>
+            <div class="stopka2">
+                <p>Regulamin strony internetowej</p>
+            </div>
+            <div class="stopka3">
+
+            </div>
+            <div class="stopka4">
+                <p>Infolinia (czynna 24h na dobę): <a id="numer">213 769 666</a></p>
+            </div>
+            <div class="stopkaD">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> AMW PP Polska</p>
+            </div>
+          </div>
+    </body>
+</html>
